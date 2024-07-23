@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../pages/MyRegistrationsPage.scss";
 
 interface Registration {
@@ -35,7 +36,9 @@ const MyRegistrationsPage: React.FC = () => {
       ) : (
         <p>No registrations found.</p>
       )}
-      <button onClick={() => navigate(-1)}>Back</button>
+      <Link to="/">
+        <button className="btn-back">Back to Events</button>
+      </Link>
     </div>
   );
 };

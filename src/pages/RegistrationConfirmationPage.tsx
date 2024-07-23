@@ -15,7 +15,7 @@ const RegistrationConfirmationPage: React.FC = () => {
       <p>Email: {registration.email}</p>
       <p>Phone: {registration.phone}</p>
       <Link to="/">
-        <button>Back to Events</button>
+        <button className="btn-back">Back to Events</button>
       </Link>
     </div>
   );

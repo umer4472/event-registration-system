@@ -1,14 +1,31 @@
 .container {
-    button {
-      background-color: #17a2b8;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-  
-      &:hover {
-        background-color: #138496;
-      }
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  p {
+    margin: 10px 0;
+    color: #555;
+  }
+
+  .btn-back {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: #138496;
     }
   }
-  
+}

@@ -51,7 +51,7 @@ const EventRegistrationPage: React.FC = () => {
               <label>Phone:</label>
               <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} required />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" className="btn-submit">Submit</button>
           </form>
         </>
       ) : (

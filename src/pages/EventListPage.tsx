@@ -18,17 +18,19 @@ const EventListPage: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Events</h1>
-      <Link to="/my-registrations">
-        <button>My Registrations</button>
-      </Link>
+      <div className="header">
+        <h1>Events</h1>
+        <Link to="/my-registrations">
+          <button className="btn">My Registrations</button>
+        </Link>
+      </div>
       {events.map(event => (
         <div key={event.id} className="event">
           <h2>{event.title}</h2>
           <p>Date: {event.date}</p>
           <p>Location: {event.location}</p>
           <Link to={`/register/${event.id}`}>
-            <button>Register</button>
+            <button className="btn-register">Register</button>
           </Link>
         </div>
       ))}
