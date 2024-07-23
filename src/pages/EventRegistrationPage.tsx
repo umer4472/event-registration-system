@@ -37,7 +37,7 @@ const EventRegistrationPage: React.FC = () => {
     <div className="container">
       {event ? (
         <>
-          <h1>Register for {event.title}</h1>
+          <h1>Register for <span>{event.title}</span> </h1>
           <form onSubmit={handleSubmit}>
             <div>
               <label>Name:</label>
