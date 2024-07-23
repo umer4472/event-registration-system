@@ -1,0 +1,14 @@
+.container {
+    button {
+      background-color: #17a2b8;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #138496;
+      }
+    }
+  }
+  
