@@ -6,7 +6,7 @@ import '../components/SideNav.scss';
 
 const SideNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true); // Start with the nav open
-
+  
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };

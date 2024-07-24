@@ -1,16 +1,17 @@
 import axios from 'axios';
-import { Event } from '../types';  // Adjust the import path as necessary
+import { Event } from '../types';
 
 const api = axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com',
+  timeout: 10000, 
 });
 
 export const getEvents = async (): Promise<Event[]> => {
-  const response = await api.get<Event[]>('/posts'); // Using 'posts' to simulate 'events'
+  const response = await api.get<any[]>(`/posts?_=${new Date().getTime()}`);
   return response.data.map(post => ({
     id: post.id,
     title: post.title,
-    date: new Date().toISOString().split('T')[0], // Simulate current date
-    location: 'Location ' + post.id, // Simulate location
+    date: new Date().toISOString().split('T')[0],
+    location: 'Location ' + post.id,
   }));
 };
