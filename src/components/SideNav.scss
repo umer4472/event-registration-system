@@ -1,49 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .side-nav {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #343a40;
-    color: white;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  transition: width 0.3s ease;
+
+  &.closed {
+    width: 60px;
+  }
+
+  nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    gap: 20px;
-    width: 250px;
-  
-    h2 {
-      margin-bottom: 30px;
-      font-size: 1.5rem;
-    }
-  
-    nav {
+    width: 100%;
+    margin-top: 50px;
+    
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
       display: flex;
-      flex-direction: column;
-      width: 100%;
-      
+      gap: 10px;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: #34495e;
+        color: #ecf0f1;
+      }
+
+      &.active {
+        background-color: #2980b9;
+        color: #ecf0f1;
+        font-weight: bold;
+      }
+
+      svg {
+        margin-right: 10px;
+      }
+
+      span {
+        transition: opacity 0.3s ease;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.closed {
+
+    nav {
       a {
-        color: white;
-        text-decoration: none;
-        padding: 15px 20px;
-        display: flex;
-        text-align: center;
-        transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: #495057;
+        justify-content: center;
+
+        svg {
+          margin-right: 0;
         }
-  
-        &.active {
-          background-color: #007bff;
+
+        span {
+          opacity: 0;
         }
       }
     }
   }
-  
-  .navbar {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 30px !important;
-  }
+}
+
+.hamburger-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000; // Ensure it's above other elements
+}

@@ -3,9 +3,15 @@
 }
 
 .main-content {
+  margin-left: 250px;
   padding: 20px;
   width: calc(100% - 250px);
-  margin-left: 250px;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+
+  .side-nav.closed & {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
 }
 
 @keyframes fadeIn {
