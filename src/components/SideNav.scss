@@ -84,5 +84,36 @@
   left: 20px;
   font-size: 1.5rem;
   cursor: pointer;
-  z-index: 1000; // Ensure it's above other elements
+  z-index: 1000;
+}
+
+@media (max-width: 750px) {
+  .side-nav {
+    width: 60px;
+
+    .nav-header {
+      h2 {
+        display: none;
+      }
+    }
+
+    nav {
+      a {
+        justify-content: center;
+
+        svg {
+          margin-right: 0;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
 }

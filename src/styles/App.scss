@@ -12,6 +12,11 @@
     margin-left: 60px;
     width: calc(100% - 60px);
   }
+
+  @media (max-width: 750px) {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
 }
 
 @keyframes fadeIn {
