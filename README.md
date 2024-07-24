@@ -70,6 +70,9 @@ The design is made responsive to ensure it works well on different screen sizes,
 `Axios for API Requests:`
 Axios was used for its simplicity and ease of handling HTTP requests and responses.
 
+`Animations and Transitions:`
+Animations were integrated to enhance user experience and provide a more engaging interface. Transitions were meticulously implemented to ensure smooth and intuitive user interactions, gracefully animating changes in UI states.
+
 ## Trade-offs
 
 `Simple Local Storage for Data Persistence:`
