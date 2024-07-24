@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../pages/MyRegistrationsPage.scss";
 
@@ -16,7 +15,6 @@ interface Registration {
 }
 
 const MyRegistrationsPage: React.FC = () => {
-  const navigate = useNavigate();
   const registrations: Registration[] = JSON.parse(localStorage.getItem("registrations") || "[]");
 
   return (

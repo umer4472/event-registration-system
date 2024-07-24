@@ -20,9 +20,6 @@ const EventListPage: React.FC = () => {
     <div className="container">
       <div className="header">
         <h1>Events</h1>
-        <Link to="/my-registrations">
-          <button className="btn">My Registrations</button>
-        </Link>
       </div>
       {events.map(event => (
         <div key={event.id} className="event">
